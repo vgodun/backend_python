@@ -1,14 +1,16 @@
 contacts = {}
+
+
 def add_contact():
     name = input("Name: ")
     email = input("Email: ")
     phone = input("Phone: ")
-
     contacts[name] = {
         "name": name,
         "email": email,
         "phone": phone,
     }
+
 
 def search_contact():
     name = input("Name: ")
@@ -16,17 +18,21 @@ def search_contact():
         if contact["name"] == name:
             print(contact)
 
+
 def view_contacts():
     if not contacts:
         print("No contacts registered.")
-    for item,key in contacts.items():
+    for item, key in contacts.items():
         print(f"{item}: {key}")
+
 
 def update_contact():
     name = input("Name: ")
     if name in contacts:
         contacts[name]["phone"] = input("Phone: ")
         contacts[name]["email"] = input("Email: ")
+
+
 def menu():
     while True:
         print("1. Add contact")
@@ -35,7 +41,6 @@ def menu():
         print("4. Update contact")
         print("5. Exit")
         choice = input("You are select:  ")
-
         if choice == "1":
             add_contact()
         elif choice == "2":
@@ -46,11 +51,8 @@ def menu():
             update_contact()
         elif choice == "5":
             break
-
         else:
             print("Not a valid choice.")
 
+
 menu()
-
-
-
