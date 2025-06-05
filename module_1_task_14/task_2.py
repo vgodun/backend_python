@@ -3,12 +3,12 @@ def min_max_avg(numbers):
         return None, None, None
 
     if len(numbers) == 1:
-        num= numbers[0]
+        num = numbers[0]
         return num, num, None
 
     min_num = min(numbers)
     max_num = max(numbers)
-    avg=sum(numbers) / len(numbers)
+    avg = sum(numbers) / len(numbers)
 
     return f"Min:{min_num}, Max:{max_num}, Avg:{avg}"
 

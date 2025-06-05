@@ -1,4 +1,6 @@
 square_number = float(input("Enter a number: "))
+
+
 def square(x):
     return x ** 2
 

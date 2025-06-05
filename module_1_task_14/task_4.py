@@ -3,7 +3,7 @@ def create_user(username, email, password, **kwargs):
         return "Username is too short"
     if '@' not in email:
         return "Email must be a valid email address"
-    if len(password) <= 8:
+    if len(password) < 8:
         return "Password must be at least 8 characters long"
 
 
