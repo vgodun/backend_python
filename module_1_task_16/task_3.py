@@ -1,8 +1,7 @@
 total = 0
 
-for num in range(10, 30):
+for num in range(10, 30,2):
     print(num)
-    total += num
 
 
 print(total)

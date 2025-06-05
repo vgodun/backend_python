@@ -1,8 +1,6 @@
 def triangle_pattern(n):
     for i in range(1, n + 1):
-        for j in range(1, n + 1):
-            print(j, end=" ")
-        print()
+        print(*range(1, i + 1))
 
 
 def multiplication_table(n):
@@ -35,7 +33,9 @@ def main():
             multiplication_table(n)
         elif choice == "3":
             n = int(input("Enter number of rows: "))
+            countdown(n)
         elif choice == "4":
             break
 
-main()
+if __name__ == "__main__":
+    main()
